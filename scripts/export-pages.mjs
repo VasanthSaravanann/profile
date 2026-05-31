@@ -8,7 +8,7 @@ const serverEntryCandidates = [
   path.join(projectRoot, "dist/server/server.js"),
   path.join(projectRoot, "dist/server/index.mjs"),
 ];
-const pagesBase = "/portfolio";
+const pagesBase = "/profile";
 
 async function walkFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
