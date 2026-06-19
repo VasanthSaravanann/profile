@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 
 const links = [
-  { label: "Email", href: "mailto:vasanth@example.com" },
-  { label: "GitHub", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "ResearchGate", href: "#" },
+  { label: "Email", href: "mailto:vasanths991@gmail.com" },
+  { label: "GitHub", href: "https://github.com/VasanthSaravanann" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vasanthsaravanan/" },
+  { label: "ResearchGate", href: "https://www.researchgate.net/profile/Vasanth-Saravanan" },
 ];
 
 export function Contact() {
