@@ -8,7 +8,7 @@ const serverEntryCandidates = [
   path.join(projectRoot, "dist/server/server.js"),
   path.join(projectRoot, "dist/server/index.mjs"),
 ];
-const pagesBase = "/profile";
+const pagesBase = "";
 
 async function walkFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -30,6 +30,7 @@ async function walkFiles(directory) {
 }
 
 function prefixPagesUrls(content) {
+  if (!pagesBase) return content;
   return content
     .replaceAll('"/assets/', `"${pagesBase}/assets/`)
     .replaceAll("'/assets/", `'${pagesBase}/assets/`)
