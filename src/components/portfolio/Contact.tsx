@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 
 const links = [
   { label: "Email", href: "mailto:vasanths991@gmail.com" },
-  { label: "GitHub", href: "https://github.com/VasanthSaravanann" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/vasanthsaravanan/" },
-  { label: "ResearchGate", href: "https://www.researchgate.net/profile/Vasanth-Saravanan" },
+  { label: "GitHub", href: "https://github.com/VasanthSaravanann", external: true },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vasanthsaravanan/", external: true },
+  { label: "ResearchGate", href: "https://www.researchgate.net/profile/Vasanth-Saravanan", external: true },
 ];
 
 export function Contact() {
@@ -55,6 +55,8 @@ export function Contact() {
               <a
                 key={l.label}
                 href={l.href}
+                target={l.external ? "_blank" : undefined}
+                rel={l.external ? "noopener noreferrer" : undefined}
                 className="group flex items-center justify-between gap-6 border-b border-border/40 py-2 text-sm transition-colors hover:text-gold"
               >
                 <span>{l.label}</span>
