@@ -20,8 +20,8 @@ export function About() {
             Discipline
           </div>
           <p className="mt-3 text-base leading-relaxed">
-            Computer Science & Data Science undergraduate working across frontend
-            engineering, applied ML, and systems thinking.
+            Master of AI student at RMIT University, Melbourne, working across
+            frontend engineering, applied ML, and systems thinking.
           </p>
         </Reveal>
         <Reveal delay={0.1}>

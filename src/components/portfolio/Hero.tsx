@@ -32,7 +32,7 @@ export function Hero() {
           className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
         >
           <div>Vasanth S</div>
-          <div className="mt-1">Chengalpattu · IN</div>
+          <div className="mt-1">Melbourne · AU</div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -83,8 +83,8 @@ export function Hero() {
               Currently
             </div>
             <div className="mt-2 text-sm">
-              BS Data Science @ IIT Madras<br />
-              B.E. CSE @ RMK College
+              Master of AI @ RMIT University<br />
+              Melbourne, Australia
             </div>
           </div>
           <div>
