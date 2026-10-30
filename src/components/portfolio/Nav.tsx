@@ -16,8 +16,11 @@ export function Nav() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="fixed left-0 right-0 top-0 z-40 flex items-center justify-between px-6 py-5 md:px-12"
     >
-      <a href="#top" className="font-display text-xl font-medium tracking-tight">
-        Vasanth<span className="text-gold">.</span>
+      <a
+        href="#top"
+        className="whitespace-nowrap font-display text-lg font-medium tracking-tight md:text-xl"
+      >
+        Vasanth Saravanan<span className="text-gold">.</span>
       </a>
       <ul className="hidden items-center gap-8 text-xs uppercase tracking-[0.2em] text-muted-foreground md:flex">
         {links.map((l) => (

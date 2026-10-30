@@ -31,7 +31,7 @@ export function Hero() {
           transition={{ delay: 0.2, duration: 1 }}
           className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
         >
-          <div>Vasanth S</div>
+          <div>Vasanth Saravanan</div>
           <div className="mt-1">Melbourne · AU</div>
         </motion.div>
         <motion.div

@@ -35,7 +35,7 @@ export function Portfolio() {
         <Contact />
       </main>
       <footer className="border-t border-border/50 py-10 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
-        © 2026 · Vasanth S · Crafted with intent
+        © 2026 · Vasanth Saravanan · Crafted with intent
       </footer>
     </div>
   );

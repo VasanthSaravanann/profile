@@ -82,16 +82,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "Vasanth S — Researcher & Frontend Developer" },
+        { title: "Vasanth Saravanan — Researcher & Frontend Developer" },
         {
           name: "description",
           content:
-            "Portfolio of Vasanth S — frontend developer, AI researcher, and published author working at the intersection of deep learning, data governance, and human-centered interfaces.",
+            "Portfolio of Vasanth Saravanan — frontend developer, AI researcher, and published author working at the intersection of deep learning, data governance, and human-centered interfaces.",
         },
-        { name: "author", content: "Vasanth S" },
+        { name: "author", content: "Vasanth Saravanan" },
         {
           property: "og:title",
-          content: "Vasanth S — Researcher & Frontend Developer",
+          content: "Vasanth Saravanan — Researcher & Frontend Developer",
         },
         {
           property: "og:description",
