@@ -78,42 +78,7 @@ export function Projects() {
         </>
       }
     >
-      <Reveal>
-        <div className="max-w-3xl">
-          <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-            Manufacturing systems suffer from latency, static workflows, and
-            slow decision-making. I built an AI-powered orchestration framework
-            that mirrors the floor in real time — closing the loop between
-            sensor data, quality control, and re-planning.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            {[
-              "Digital Twin",
-              "Orchestration",
-              "Edge Inference",
-              "OEE",
-              "Python",
-            ].map((t) => (
-              <span
-                key={t}
-                className="rounded-full border border-border/60 px-3 py-1.5"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-          <a
-            href="https://github.com/VasanthSaravanann/MARL_DT"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.3em] text-gold transition-opacity hover:opacity-70"
-          >
-            View MARL_DT on GitHub <span aria-hidden>↗</span>
-          </a>
-        </div>
-      </Reveal>
-
-      <div className="mt-24 space-y-px">
+      <div className="space-y-px">
         {projects.map((p, i) => (
           <Reveal key={p.repo} delay={i * 0.05}>
             <article className="group grid gap-6 border-t border-border/40 py-10 transition-colors hover:bg-surface/40 md:grid-cols-[60px_1fr_1.6fr]">
