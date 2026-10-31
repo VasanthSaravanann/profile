@@ -1,6 +1,17 @@
 import { Section, Reveal } from "./Section";
 
-const papers = [
+type Paper = {
+  title: string;
+  venue: string;
+  /** DOI identifier, shown under the venue. Omit for papers without one. */
+  doi?: string;
+  /** Resolvable link for the title (usually the DOI URL). */
+  url?: string;
+  /** Publication status label (e.g. "Presented") used when there is no DOI. */
+  status?: string;
+};
+
+const papers: Paper[] = [
   {
     title:
       "Bridge the Generalization Gap: A Comprehensive Framework for Enhanced Reliability and Robustness in Deep Learning Models",
@@ -16,7 +27,8 @@ const papers = [
     url: "https://doi.org/10.1109/ICSES63760.2024.10910410",
   },
   {
-    title: "Demystifying AI: A Robust and Comprehensive Approach to Explainable AI",
+    title:
+      "Demystifying AI: A Robust and Comprehensive Approach to Explainable AI",
     venue: "IEEE ICEC 2024",
     doi: "10.1109/ICEC59683.2024.10837078",
     url: "https://doi.org/10.1109/ICEC59683.2024.10837078",
@@ -25,8 +37,7 @@ const papers = [
     title:
       "Automated Dynamic Schema Evolution for Eliminating Pipeline Brittleness in Real-Time Data Ingestion Systems",
     venue: "ICCT-SD 2026 · GNDEC × NIT Delhi",
-    doi: "Presented",
-    url: "",
+    status: "Presented",
   },
 ];
 
@@ -38,7 +49,9 @@ export function Publications() {
       label="Research & Publications"
       title={
         <>
-          Papers, conferences and <em className="italic text-gradient-gold">questions</em> worth chasing.
+          Papers, conferences and{" "}
+          <em className="italic text-gradient-gold">questions</em> worth
+          chasing.
         </>
       }
     >
@@ -51,7 +64,12 @@ export function Publications() {
               </div>
               <div>
                 {p.url ? (
-                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="font-display text-xl font-light leading-snug transition-colors hover:text-gold md:text-2xl">
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-display text-xl font-light leading-snug transition-colors hover:text-gold md:text-2xl"
+                  >
                     {p.title}
                   </a>
                 ) : (
@@ -62,7 +80,11 @@ export function Publications() {
               </div>
               <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:text-right">
                 <div>{p.venue}</div>
-                <div className="mt-1 text-foreground/60">{p.doi}</div>
+                {(p.doi ?? p.status) && (
+                  <div className="mt-1 text-foreground/60">
+                    {p.doi ?? p.status}
+                  </div>
+                )}
               </div>
             </article>
           </Reveal>

@@ -31,14 +31,24 @@ jobs:
       - name: Install dependencies
         run: npm ci --include=optional
 
-      - name: Install Rollup native binary
-        run: npm install --no-save @rollup/rollup-linux-x64-gnu@4.60.2 lightningcss-linux-x64-gnu@1.32.0 @tailwindcss/oxide-linux-x64-gnu@4.2.4
+      - name: Install native binaries for the runner platform
+        # The lockfile (generated on macOS) omits the linux-x64 variants of
+        # rollup's and tailwind-oxide's optional deps, so npm ci can't place
+        # them. Install them explicitly, but derive every version from the
+        # lockfile so they can never drift from the resolved JS packages.
+        run: |
+          ROLLUP_VER=$(node -p "require('./package-lock.json').packages['node_modules/rollup'].version")
+          OXIDE_VER=$(node -p "require('./package-lock.json').packages['node_modules/@tailwindcss/oxide'].version")
+          npm install --no-save "@rollup/rollup-linux-x64-gnu@${ROLLUP_VER}" "@tailwindcss/oxide-linux-x64-gnu@${OXIDE_VER}"
 
       - name: Build site
         run: npm run build
 
       - name: Disable Jekyll
         run: touch dist/client/.nojekyll
+
+      - name: Copy CNAME for custom domain
+        run: cp CNAME dist/client/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

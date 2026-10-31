@@ -106,7 +106,7 @@ export function Hero() {
         className="relative z-10 mt-12 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
       >
         <span>↓ Scroll to explore</span>
-        <span>01 / 06</span>
+        <span>01 / 07</span>
       </motion.div>
     </section>
   );
