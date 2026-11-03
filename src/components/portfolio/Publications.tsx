@@ -37,6 +37,7 @@ const papers: Paper[] = [
     title:
       "Automated Dynamic Schema Evolution for Eliminating Pipeline Brittleness in Real-Time Data Ingestion Systems",
     venue: "ICCT-SD 2026 · GNDEC × NIT Delhi",
+    url: "https://gndec.ac.in/icct-sd-2026/proceedings.html",
     status: "Presented",
   },
 ];
