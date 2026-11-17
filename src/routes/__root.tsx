@@ -75,23 +75,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "Vasanth Saravanan — Researcher & Frontend Developer" },
+        { title: "Vasanth Saravanan — AI Engineer & Researcher" },
         {
           name: "description",
           content:
-            "Portfolio of Vasanth Saravanan — frontend developer, AI researcher, and published author working at the intersection of deep learning, data governance, and human-centered interfaces.",
+            "Portfolio of Vasanth Saravanan — AI engineer and researcher pursuing a Master of AI, working across applied machine learning, systems, and the interfaces built on top.",
         },
         { name: "author", content: "Vasanth Saravanan" },
         { name: "theme-color", content: "#221c14" },
         { name: "color-scheme", content: "dark" },
         {
           property: "og:title",
-          content: "Vasanth Saravanan — Researcher & Frontend Developer",
+          content: "Vasanth Saravanan — AI Engineer & Researcher",
         },
         {
           property: "og:description",
           content:
-            "Frontend developer & AI researcher. Published work in deep learning robustness, data governance, and explainable AI.",
+            "AI engineer & researcher pursuing a Master of AI. Published work in deep learning robustness, data governance, and explainable AI.",
         },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://vasanthsaravanan.me/" },

@@ -73,8 +73,8 @@ export function Hero() {
           className="mt-16 grid gap-8 border-t border-border/40 pt-8 md:grid-cols-[1.5fr_1fr_1fr]"
         >
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Frontend developer & AI researcher building interfaces, systems and
-            ideas that bridge deep learning with everyday usability.
+            AI engineer building systems that hold up outside the notebook —
+            from model behaviour down to the interfaces people actually touch.
           </p>
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
