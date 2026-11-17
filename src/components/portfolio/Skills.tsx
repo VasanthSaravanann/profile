@@ -5,7 +5,7 @@ const groups = [
     label: "Frontend",
     items: ["React", "React Native", "HTML", "CSS", "Figma"],
   },
-  { label: "Backend", items: ["Java", "C++", "Python"] },
+  { label: "Backend", items: ["Java", "C++", "Python", "Rust"] },
   {
     label: "ML & Data",
     items: ["NumPy", "Pandas", "Deep Learning", "Image Processing"],

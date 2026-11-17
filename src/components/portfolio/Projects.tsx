@@ -12,6 +12,24 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: "mcp-provenance-boundary",
+    role: "Security · LLM Agents",
+    year: "2026",
+    blurb:
+      "A provenance boundary for cross-session LLM-agent memory: tool results are labelled at the MCP transport, the label survives summarisation and restart, and privileged calls that inherit it are denied (DENY_TAINT_PIVOT). 180/180 injected-memory attack calls blocked with 0/81 benign external flows stopped, benchmarked against AgentDojo and CaMeL across 433 tests and 6 models.",
+    tags: ["Rust", "MCP", "Taint Tracking", "AgentDojo", "CaMeL"],
+    repo: "https://github.com/VasanthSaravanann/mcp-provenance-boundary",
+  },
+  {
+    name: "mmd-sprt-harness",
+    role: "Systems · AI Safety",
+    year: "2026",
+    blurb:
+      "A deployment-gating harness that ANDs four independent checks into one verdict — 3-gram RBF MMD² distributional attestation, exponential-decay SPRT convergence, P99-winsorized weighted-Spearman IPW correlation, and a Linux eBPF/kprobe canary interceptor. Measured 4.3 ms median fork→SIGKILL at 69K ringbuf events/s, with a Rust core and a Python reference cross-check.",
+    tags: ["Rust", "eBPF · kprobe", "MMD²", "SPRT", "IPW"],
+    repo: "https://github.com/VasanthSaravanann/mmd-sprt-harness",
+  },
+  {
     name: "cpp-rag",
     role: "Systems · Retrieval",
     year: "2026",
