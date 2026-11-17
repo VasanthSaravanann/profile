@@ -89,6 +89,7 @@ export function Projects() {
                 <h3 className="font-display text-2xl font-light leading-snug transition-colors group-hover:text-gold">
                   <a href={p.repo} target="_blank" rel="noopener noreferrer">
                     {p.name}
+                    <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                 </h3>
                 <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
@@ -120,6 +121,10 @@ export function Projects() {
                     className="text-gold transition-opacity hover:opacity-70"
                   >
                     Source <span aria-hidden>↗</span>
+                    <span className="sr-only">
+                      {" "}
+                      for {p.name} (opens in a new tab)
+                    </span>
                   </a>
                   {p.demo ? (
                     <a
@@ -129,6 +134,10 @@ export function Projects() {
                       className="text-muted-foreground transition-colors hover:text-foreground"
                     >
                       Live demo <span aria-hidden>↗</span>
+                      <span className="sr-only">
+                        {" "}
+                        for {p.name} (opens in a new tab)
+                      </span>
                     </a>
                   ) : null}
                 </div>

@@ -1,12 +1,24 @@
 import { Section, Reveal } from "./Section";
 
 const groups = [
-  { label: "Frontend", items: ["React", "React Native", "HTML", "CSS", "Figma"] },
+  {
+    label: "Frontend",
+    items: ["React", "React Native", "HTML", "CSS", "Figma"],
+  },
   { label: "Backend", items: ["Java", "C++", "Python"] },
-  { label: "ML & Data", items: ["NumPy", "Pandas", "Deep Learning", "Image Processing"] },
+  {
+    label: "ML & Data",
+    items: ["NumPy", "Pandas", "Deep Learning", "Image Processing"],
+  },
   {
     label: "Soft",
-    items: ["Research Writing", "Leadership", "Problem Solving", "Team Management", "Presentation"],
+    items: [
+      "Research Writing",
+      "Leadership",
+      "Problem Solving",
+      "Team Management",
+      "Presentation",
+    ],
   },
   { label: "Languages", items: ["Tamil", "English", "Hindi"] },
 ];
@@ -17,7 +29,11 @@ export function Skills() {
       id="skills"
       index="06"
       label="Toolkit"
-      title={<>The things on my <em className="italic text-gradient-gold">bench</em>.</>}
+      title={
+        <>
+          The things on my <em className="italic text-gradient-gold">bench</em>.
+        </>
+      }
     >
       <div className="grid gap-12 md:grid-cols-2">
         {groups.map((g, i) => (
@@ -31,7 +47,9 @@ export function Skills() {
                   <span key={it}>
                     {it}
                     {idx < g.items.length - 1 && (
-                      <span className="ml-5 text-gold/60">·</span>
+                      <span className="ml-5 text-gold/60" aria-hidden="true">
+                        ·
+                      </span>
                     )}
                   </span>
                 ))}

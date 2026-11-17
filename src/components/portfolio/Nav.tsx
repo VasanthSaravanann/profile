@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const links = [
   { label: "About", href: "#about" },
@@ -12,6 +12,18 @@ const links = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
+
+  // Dismiss the mobile menu with Escape, matching native overlay behaviour.
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <motion.nav
@@ -33,7 +45,7 @@ export function Nav() {
           aria-expanded={open}
           aria-controls="nav-mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
         >
           <span
             className={`h-px w-5 bg-foreground transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
@@ -58,7 +70,7 @@ export function Nav() {
       {open && (
         <ul
           id="nav-mobile-menu"
-          className="mt-4 flex w-full flex-col items-center gap-4 text-xs uppercase tracking-[0.2em] text-muted-foreground md:hidden"
+          className="mt-4 flex w-full flex-col items-center gap-4 rounded-2xl border border-border/40 bg-background/95 px-6 py-6 text-xs uppercase tracking-[0.2em] text-muted-foreground backdrop-blur-md md:hidden"
         >
           {links.map((l) => (
             <li key={l.href}>

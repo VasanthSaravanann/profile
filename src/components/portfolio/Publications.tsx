@@ -72,6 +72,7 @@ export function Publications() {
                     className="font-display text-xl font-light leading-snug transition-colors hover:text-gold md:text-2xl"
                   >
                     {p.title}
+                    <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                 ) : (
                   <h3 className="font-display text-xl font-light leading-snug md:text-2xl">

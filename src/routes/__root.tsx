@@ -82,6 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "Portfolio of Vasanth Saravanan — frontend developer, AI researcher, and published author working at the intersection of deep learning, data governance, and human-centered interfaces.",
         },
         { name: "author", content: "Vasanth Saravanan" },
+        { name: "theme-color", content: "#221c14" },
+        { name: "color-scheme", content: "dark" },
         {
           property: "og:title",
           content: "Vasanth Saravanan — Researcher & Frontend Developer",
@@ -98,6 +100,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       ],
       links: [
         { rel: "canonical", href: "https://vasanthsaravanan.me/" },
+        { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossOrigin: "anonymous",
+        },
         {
           rel: "stylesheet",
           href: appCss,
