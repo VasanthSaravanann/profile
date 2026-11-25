@@ -8,9 +8,36 @@ type Project = {
   tags: string[];
   repo: string;
   demo?: string;
+  demoLabel?: string;
 };
 
 const projects: Project[] = [
+  {
+    name: "Ledger",
+    role: "Systems · Governance",
+    year: "2026",
+    blurb:
+      "An audit-grade recorder for a deliberately narrow hiring pilot: every rejection is locked to a GATE, FIELD or ADMIN disposition, the copy a candidate received is signed by Legal and hashed, and each send appends to a hash chain a stdlib-only verifier can re-check without trusting the binary. Rust CLI plus a TanStack Start workspace preview — 136 tests, a 147-entry seeded log that verifies, and a tamper demo that fails at the first flipped byte.",
+    tags: ["Rust", "Ed25519", "Hash Chain", "TanStack Start", "Governance"],
+    repo: "https://github.com/VasanthSaravanann/Ledger",
+    demo: "https://ledger-pilot-chi.vercel.app",
+    demoLabel: "Live preview",
+  },
+  {
+    name: "pi-subagent-cascade",
+    role: "Tooling · LLM Agents",
+    year: "2026",
+    blurb:
+      "Cheap-to-frontier escalation for delegated coding work, decided by the gate instead of a guess: a cheap model runs in a throwaway git worktree, gets one repair pass with the error text, and only then hands off to the frontier tier. Every attempt records its real cost to a JSONL ledger, with a per-repo spend ceiling, a single-flight lock and six fixtures that exercise each rung of the ladder.",
+    tags: [
+      "TypeScript",
+      "Pi Extension",
+      "Git Worktrees",
+      "Model Routing",
+      "Cost Ledger",
+    ],
+    repo: "https://github.com/VasanthSaravanann/pi-subagent-cascade",
+  },
   {
     name: "mcp-provenance-boundary",
     role: "Security · LLM Agents",
@@ -151,7 +178,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="text-muted-foreground transition-colors hover:text-foreground"
                     >
-                      Live demo <span aria-hidden>↗</span>
+                      {p.demoLabel ?? "Live demo"} <span aria-hidden>↗</span>
                       <span className="sr-only">
                         {" "}
                         for {p.name} (opens in a new tab)

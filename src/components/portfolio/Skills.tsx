@@ -3,7 +3,7 @@ import { Section, Reveal } from "./Section";
 const groups = [
   {
     label: "Frontend",
-    items: ["React", "React Native", "HTML", "CSS", "Figma"],
+    items: ["React", "React Native", "TypeScript", "HTML", "CSS", "Figma"],
   },
   { label: "Backend", items: ["Java", "C++", "Python", "Rust"] },
   {
